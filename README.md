@@ -62,4 +62,9 @@ pw : 123456
 
 에러!
 Cannot find a version of 'com.google.code.findbugs:jsr305' 
-가 떠서 build.gradle(Module:app)에 androidTestImplementation 'com.google.code.findbugs:jsr305:1.3.9' 추가. 그래도 안돼
+가 떠서 build.gradle(Module:app)에 androidTestImplementation 'com.google.code.findbugs:jsr305:1.3.9' 추가. 그래도 안돼서
+
+'com.google.code.findbugs:jsr305:2.0.1'도 추가하니 정상적으로 빌드됨.
+
+- Step 7: APK로 설치
+성공. 다른 사람의 핸드폰에서도 동일하게 기능하는지 확인해 보자.
