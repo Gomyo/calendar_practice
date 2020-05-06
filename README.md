@@ -25,6 +25,7 @@
 #### :date:2020.05.02
 ###### [실습]Google Calendar API Application 만들기
 Android Google Calendar API 사용법 참조한 진행 [링크](https://solokim.tistory.com/6)
+
 - Step 1: SHA1 인증키
 '''
 keytool -exportcert -alias androiddebugkey -keystore c:/users/cjw11/.android/debug.keystore -list -v
@@ -43,12 +44,12 @@ OAuth 클라이언트 ID : 567242097103-psfo0n5a6v8iq5cmvvtaiujaqst9h15s.apps.go
 - Step 4: 프로젝트 소스 수정
 참조 : (https://developers.google.com/gsuite/guides/android#step_4_prepare_the_project)
 
-- build.gradle(Module: app)의 dependencies 수정: compile말고 implementation 추가. meta-data는 수정하지 않았음
+build.gradle(Module: app)의 dependencies 수정: compile말고 implementation 추가. meta-data는 수정하지 않았음
 
-- AndroidManifest 수정 - Add User Permission
+AndroidManifest 수정 - Add User Permission
 
-- MainActivity.java, xml 파일 복붙
-- MainActivity에서 AppcompatActivity 부분을 import class
+MainActivity.java, xml 파일 복붙
+MainActivity에서 AppcompatActivity 부분을 import class
 
 - Step 5: 내 핸드폰에서 실행해보기
 성공했다. Calendertitle이라는 새로운 캘린더를 만들고, 거기에 구글 캘린더 테스트라는 이벤트를 등록할 수 있었다. 이제 옵션 창을 추가하는 것으로 완성할 수 있을 것 같다.
@@ -62,4 +63,4 @@ pw : 123456
 
 에러!
 Cannot find a version of 'com.google.code.findbugs:jsr305' 
-가 떠서 build.gradle(Module:app)에 androidTestImplementation 'com.google.code.findbugs:jsr305:1.3.9' 추가. 그래도 안돼
+가 떠서 build.gradle(Module:app)에 androidTestImplementation 'com.google.code.findbugs:jsr305:1.3.9' 추가. 그래도 에러
