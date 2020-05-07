@@ -80,6 +80,7 @@ Cannot find a version of 'com.google.code.findbugs:jsr305'
 ## Problem 
 1. 혼자 테스트하면 괜찮은데 다른 사람이 사용할 경우 Request Error가 발생 (팀원 분들 핸드폰으로 다시 확인할 것)
 
+Android SHA1 Release 키 구하기 배포용 키 [링크](https://developer.android.com/studio/publish/app-signing)
 ## Next Feature
 <pre>
 1. 화면에 Calender 표시
