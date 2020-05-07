@@ -26,33 +26,22 @@
 ###### [실습]Google Calendar API Application 만들기
 Android Google Calendar API 사용법 참조한 진행 [링크](https://solokim.tistory.com/6)
 
-- Step 1: SHA1 인증키
+- Step 1: SHA1 인증키 생성
 '''
 keytool -exportcert -alias androiddebugkey -keystore c:/users/cjw11/.android/debug.keystore -list -v
 '''
-SHA1: 24:2D:F3:24:EA:9C:17:93:BF:9B:07:F8:1C:B4:7E:AB:10:0A:63:03
 
 - Step 2: 안드로이드 프로젝트 만들기
 Minimum API Level : API 28: Android 9.0(Pie)
 Package name : com.example.sst_calendar_example (OAuth Client ID 생성에 필요함)
 
 - Step 3: 구글 캘린더 API 활성화
-참조 : (https://webnautes.tistory.com/1217)
-API 키
-OAuth 클라이언트 ID : 567242097103-psfo0n5a6v8iq5cmvvtaiujaqst9h15s.apps.googleusercontent.com
 
-- Step 4: 프로젝트 소스 수정
-참조 : (https://developers.google.com/gsuite/guides/android#step_4_prepare_the_project)
-
-build.gradle(Module: app)의 dependencies 수정: compile말고 implementation 추가. meta-data는 수정하지 않았음
-
-AndroidManifest 수정 - Add User Permission
-
-MainActivity.java, xml 파일 복붙
-MainActivity에서 AppcompatActivity 부분을 import class
+- Step 4: 프로젝트 소스 붙이기
+build.gradle(Module: app)의 dependencies 수정: implementation 추가. meta-data는 수정하지 않았음
 
 - Step 5: 내 핸드폰에서 실행해보기
-성공했다. Calendertitle이라는 새로운 캘린더를 만들고, 거기에 구글 캘린더 테스트라는 이벤트를 등록할 수 있었다. 이제 옵션 창을 추가하는 것으로 완성할 수 있을 것 같다.
+성공했다. 새로운 캘린더를 만들고, 거기에 구글 캘린더 테스트라는 이벤트를 등록할 수 있었다. 이제 옵션 창을 추가하는 것으로 완성할 수 있을 것 같다.
 
 - Step 6: APK 파일 생성
 
