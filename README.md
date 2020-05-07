@@ -55,17 +55,17 @@ MainActivity에서 AppcompatActivity 부분을 import class
 성공했다. Calendertitle이라는 새로운 캘린더를 만들고, 거기에 구글 캘린더 테스트라는 이벤트를 등록할 수 있었다. 이제 옵션 창을 추가하는 것으로 완성할 수 있을 것 같다.
 
 - Step 6: APK 파일 생성
+
+'''
 key store path : C:\Coding\sst_calendar\sst_calender_test.jks
 pw : 123456
-
 key alias: sttTest
 pw : 123456
-
 에러!
 Cannot find a version of 'com.google.code.findbugs:jsr305' 
 가 떠서 build.gradle(Module:app)에 androidTestImplementation 'com.google.code.findbugs:jsr305:1.3.9' 추가. 그래도 안돼서
-
 'com.google.code.findbugs:jsr305:2.0.1'도 추가하니 정상적으로 빌드됨.
+'''
 
 - Step 7: APK로 설치
 성공. 다른 사람의 핸드폰에서도 동일하게 기능하는지 확인해 보자.
