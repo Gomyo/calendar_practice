@@ -1,6 +1,7 @@
 # SST_Calendar 구현을 위한 개인 공부 기록:pencil:
 #### :date:2020.05.01
 ###### [생활코딩]구글 API를 통해서 배우는 인증(OAuth 2.0)
+**1강 : OT**
 **2강 : 동작 매커니즘**
 - User가 client에게 id,pw를 주고 client가 필요할 때마다 server에 접근하던 방식은 OAuth에 비해 편리하지만 보안성이 부족하다는 엄청난 단점이 있다.
 - 이에 client는 서버에 '당신들 서비스를 사용하겠다'고 등록을 한다. 그러면 서버는 클라이언트에게 id와 secret을 주고 클라이언트는 이를 저장한다 여기서 secret은 절대 공개되면 안된다. 이후 유저가 클라이언트에 접속하면, 익히 보는 '~~한 이유로 우리는 Google의 Calendar 정보가 필요합니다. 그러니까 승인해 주세요.'가 뜨고, 그것을 승인하면 유저는 서버로 바로 접속할 수 있다. 
@@ -56,20 +57,46 @@ MainActivity에서 AppcompatActivity 부분을 import class
 
 - Step 6: APK 파일 생성
 
-'''
-key store path : C:\Coding\sst_calendar\sst_calender_test.jks
-pw : 123456
-key alias: sttTest
-pw : 123456
-에러!
+key store path : C:\Coding\sst_calendar\sst_calender_test.jks</br>
+pw : 123456</br>
+key alias: sttTest</br>
+pw : 123456</br>
+
+에러 발생!</br>
+
 Cannot find a version of 'com.google.code.findbugs:jsr305' 
-가 떠서 build.gradle(Module:app)에 androidTestImplementation 'com.google.code.findbugs:jsr305:1.3.9' 추가. 그래도 안돼서
-'com.google.code.findbugs:jsr305:2.0.1'도 추가하니 정상적으로 빌드됨.
-'''
+가 떠서</br>
+
+ build.gradle(Module:app)에 androidTestImplementation 'com.google.code.findbugs:jsr305:1.3.9' 추가.</br> 
+
+그래도 안돼서 'com.google.code.findbugs:jsr305:2.0.1'도 추가하니 정상적으로 빌드됨.</br>
+
 
 - Step 7: APK로 설치
 성공. 다른 사람의 핸드폰에서도 동일하게 기능하는지 확인해 보자.
 
-#### :date:2020.05.07
-나 혼자 테스트 해볼 때는 되지만 다른 사람이 등록하는 순간 request~ 에러 발생. 이후 내가 테스트해도 동일한 에러가 발생함.
-[SHA1 관련 확인해 볼 링크](https://stackoverflow.com/questions/39697905/generate-sha1-fingerprint-in-android-studio-2-2)
+#### :date:2020.05.07 (공식일정 시작)
+
+## Current Feature
+<pre>
+1. Add Calender 클릭하면 구글 계정과 연동하고, "NaverHackday" 라는 새 캘린더 생성
+2. Add Event 클릭하면 "Naver Calendar Test" 제목의 "나만 없어 고양이" 내용이 생성된다. Location은 "안산시". 
+시간은 simpledateformat을 사용하여 현재 시간을 자동으로 기록한다.
+3. Get Event 클릭하면 "NaverHackday" 캘린더에서 현재 시간에 가까운 10개의 일정을 가져온다.
+</pre>
+
+## Problem 
+1. 혼자 테스트하면 괜찮은데 다른 사람이 사용할 경우 Request Error가 발생 (팀원 분들 핸드폰으로 다시 확인할 것)
+
+## Next Feature
+<pre>
+1. 화면에 Calender 표시
+2. EditText를 사용해 사용자가 원하는 제목, 내용, 장소의 Event 생성하기
+3. EditText를 사용해 사용자가 원하는 기간의 Event들 불러오기
+4. 여러 사람이 사용해도 정상 작동하도록 하기
+</pre>
+**TODO List**
+
+<pre>
+//TODO : layout에 Calender 가져오기</br>//TODO : EditText로 값을 받아오도록 변경하기</br>//TODO : EditText를 사용해 일정을 가져오고 싶은 시간 정하기</br>//TODO : 여러 사람이 사용할 때에 API 접속이 어떻게 되는지, Request Error 원인은 무엇인지 파악
+</pre>
