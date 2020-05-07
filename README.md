@@ -1,4 +1,4 @@
-# SST_Calendar 구현을 위한 개인 공부 기록:pencil:
+# STT_Calendar 구현을 위한 개인 공부 기록:pencil:
 #### :date:2020.05.01
 ###### [생활코딩]구글 API를 통해서 배우는 인증(OAuth 2.0)
 **1강 : OT**
@@ -28,21 +28,24 @@
 Android Google Calendar API 사용법 참조한 진행 [링크](https://solokim.tistory.com/6)
 
 - Step 1: SHA1 인증키 생성
-'''
-keytool -exportcert -alias androiddebugkey -keystore c:/users/cjw11/.android/debug.keystore -list -v
-'''
 
 - Step 2: 안드로이드 프로젝트 만들기
-Minimum API Level : API 28: Android 9.0(Pie)
-Package name : com.example.sst_calendar_example (OAuth Client ID 생성에 필요함)
+Minimum API Level : API 21: Android 6.0(Marshmellow)
+Package name : com.example.sst_calendar(OAuth Client ID 생성에 필요함)
 
 - Step 3: 구글 캘린더 API 활성화
 
-- Step 4: 프로젝트 소스 붙이기
-build.gradle(Module: app)의 dependencies 수정: implementation 추가. meta-data는 수정하지 않았음
+- Step 4: 프로젝트 소스 수정
+
+build.gradle(Module: app)의 dependencies 수정: compile말고 implementation 추가. meta-data는 수정하지 않았음
+
+AndroidManifest 수정 - Add User Permission
+
+MainActivity.java, xml 파일 복붙
+MainActivity에서 AppcompatActivity 부분을 import class
 
 - Step 5: 내 핸드폰에서 실행해보기
-성공했다. 새로운 캘린더를 만들고, 거기에 구글 캘린더 테스트라는 이벤트를 등록할 수 있었다. 이제 옵션 창을 추가하는 것으로 완성할 수 있을 것 같다.
+성공했다. Calendertitle이라는 새로운 캘린더를 만들고, 거기에 구글 캘린더 테스트라는 이벤트를 등록할 수 있었다. 이제 옵션 창을 추가하는 것으로 완성할 수 있을 것 같다.
 
 - Step 6: APK 파일 생성
 
