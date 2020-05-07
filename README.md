@@ -69,3 +69,7 @@ Cannot find a version of 'com.google.code.findbugs:jsr305'
 
 - Step 7: APK로 설치
 성공. 다른 사람의 핸드폰에서도 동일하게 기능하는지 확인해 보자.
+
+#### :date:2020.05.07
+나 혼자 테스트 해볼 때는 되지만 다른 사람이 등록하는 순간 request~ 에러 발생. 이후 내가 테스트해도 동일한 에러가 발생함.
+[SHA1 관련 확인해 볼 링크](https://stackoverflow.com/questions/39697905/generate-sha1-fingerprint-in-android-studio-2-2)
