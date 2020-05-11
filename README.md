@@ -93,3 +93,6 @@ Android SHA1 Release 키 구하기 배포용 키 [링크](https://developer.andr
 <pre>
 //TODO : layout에 Calender 가져오기</br>//TODO : EditText로 값을 받아오도록 변경하기</br>//TODO : EditText를 사용해 일정을 가져오고 싶은 시간 정하기</br>//TODO : 여러 사람이 사용할 때에 API 접속이 어떻게 되는지, Request Error 원인은 무엇인지 파악
 </pre>
+
+#### :date:2020.05.11
+Android User Permission 관련 질의응답 완료 - Easypermission 라이브러리를 사용하는 것이 어떤 문제를 일으킬 수 있는가에 관한 Topic(Slack에 save해둠)
